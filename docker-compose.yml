@@ -1,4 +1,6 @@
-﻿services:
+﻿version: '3.8'
+
+services:
   sqlserver:
     image: mcr.microsoft.com/mssql/server:2022-latest
     container_name: sqlserver
@@ -6,7 +8,7 @@
       - ACCEPT_EULA=Y
       - SA_PASSWORD=YourStrong@Password123
     ports:
-      - "1435:1433"
+      - "1433:1433"
     volumes:
       - sqlserver-data:/var/opt/mssql
     networks:
@@ -22,6 +24,21 @@
       - ConnectionStrings__DefaultConnection=Server=sqlserver;Database=OrderDb;User Id=sa;Password=YourStrong@Password123;TrustServerCertificate=True;
     ports:
       - "5080:8080"
+    depends_on:
+      - sqlserver
+    networks:
+      - app-net
+
+  inventoryservice:
+    build:
+      context: .
+      dockerfile: src/InventoryService/InventoryService.Api/Dockerfile
+    container_name: inventoryservice
+    environment:
+      - ASPNETCORE_ENVIRONMENT=Development
+      - ConnectionStrings__DefaultConnection=Server=sqlserver;Database=InventoryDb;User Id=sa;Password=YourStrong@Password123;TrustServerCertificate=True;
+    ports:
+      - "5081:8080"
     depends_on:
       - sqlserver
     networks:

@@ -4,6 +4,12 @@
     <File Path="README.md" />
   </Folder>
   <Folder Name="/src/" />
+  <Folder Name="/src/InventoryService/">
+    <Project Path="src/InventoryService/InventoryService.Api/InventoryService.Api.csproj" />
+    <Project Path="src/InventoryService/InventoryService.Application/InventoryService.Application.csproj" />
+    <Project Path="src/InventoryService/InventoryService.Domain/InventoryService.Domain.csproj" />
+    <Project Path="src/InventoryService/InventoryService.Infrastructure/InventoryService.Infrastructure.csproj" />
+  </Folder>
   <Folder Name="/src/OrderService/">
     <Project Path="src/OrderService/OrderService.Api/OrderService.Api.csproj" Id="7dbeba4d-6ea0-4688-b9ac-879afa2b8daa" />
     <Project Path="src/OrderService/OrderService.Application/OrderService.Application.csproj" Id="7dfd15ed-bb12-4874-ae17-ce47d5126092" />
