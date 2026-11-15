@@ -5,9 +5,9 @@
   </Folder>
   <Folder Name="/src/" />
   <Folder Name="/src/OrderService/">
-    <Project Path="OrderService.Api/OrderService.Api.csproj" />
-    <Project Path="OrderService.Application/OrderService.Application.csproj" />
-    <Project Path="OrderService.Domain/OrderService.Domain.csproj" />
-    <Project Path="OrderService.Infrastructure/OrderService.Infrastructure.csproj" />
+    <Project Path="src/OrderService/OrderService.Api/OrderService.Api.csproj" Id="7dbeba4d-6ea0-4688-b9ac-879afa2b8daa" />
+    <Project Path="src/OrderService/OrderService.Application/OrderService.Application.csproj" Id="7dfd15ed-bb12-4874-ae17-ce47d5126092" />
+    <Project Path="src/OrderService/OrderService.Domain/OrderService.Domain.csproj" Id="55e73ce9-b48c-4068-88fa-eff7a9848ced" />
+    <Project Path="src/OrderService/OrderService.Infrastructure/OrderService.Infrastructure.csproj" Id="dee423eb-b93c-42cd-ae07-c7e255651b76" />
   </Folder>
 </Solution>

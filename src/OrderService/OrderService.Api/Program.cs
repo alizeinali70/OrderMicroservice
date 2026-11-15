@@ -1,6 +1,6 @@
 using Microsoft.EntityFrameworkCore;
-using OrderService.Api.DTOs;
 using OrderService.Application;
+using OrderService.Application.DTOs;
 using OrderService.Infrastructure.Context;
 
 var builder = WebApplication.CreateBuilder(args);
